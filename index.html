@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bipul Chaudhary Portfolio</title>
+    <link rel="stylesheet" href="style_hidden.css">
+    <script src="https://kit.fontawesome.com/69f4347354.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-draw@1.0.4/dist/leaflet.draw.css" />
+<script src="https://cdn.jsdelivr.net/npm/leaflet-draw@1.0.4/dist/leaflet.draw.js"></script>
+</head>
+
+<body>
+    <header>
+       <nav>
+    <div class="left" style="font-size: 25px;">Bipul Chaudhary</div>
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
+    <ul id="nav-links">
+        <li><a href="#Home">Home</a></li>
+        <li><a href="#About">About</a></li>
+        <li><a href="#Education">Education</a></li>
+        <li><a href="#Projects">Projects</a></li>
+        <li><a href="#Achievements">Achievements</a></li>
+        <li><a href="#Contact">Contact</a></li>
+    </ul>
+</nav>
+
+    </header>
+    <main>
+        <section id="Home" class="firstSection">
+            <pre><img src = "bipul.jpg" height = "380" />
+          
+ <span id="element"></span> </pre>
+        </section>
+        <br>
+        <br>
+        <br>
+
+        <br>
+        <section id="About" class="secondSection">
+            <div class="left">
+                <h3 class="pro" style="font-size: 30px;font-family: 'Courier New', Courier, monospace;">Personal
+                    Information:</h3>
+                <PRE><div>Name : Bipul Chaudhary</div></PRE>
+                <pre><div>D.O.B: 17/11/2002</div></pre>
+                <pre><div>Address: Tilathi,Koiladi,Saptari</div></pre>
+                <pre><div>Permanent Address: Tilathi,Koiladi,Saptari</div></pre>
+                <pre><div>Residential Address Rajbiraj,Saptari</div></pre>
+                <pre><div>Nationality: Nepal</div></pre>
+                <h3 style="margin-top: 20px;">My Hometown</h3>
+                <div id="map" style="height: 250px; width: 80%; border: 2px solid #ccc; border-radius: 10px;"></div>
+            </div>
+            <div class="right">
+                <h1 class="pro" style="font-size: 30px;font-family: 'Courier New', Courier, monospace;">Biography</h1>
+                <p>Hi, I am Bipul Chaudhary.I am an undergraduate student at kathmandu university,learning to excel at
+                    Geomatics domain.I am quite handy with GIS tools.I adore exploring different geospatial domains and
+                    technologies related to spatial domain.I have a keen interest in becoming a frontend developer so
+                    that i can use my styling and structuring skills in developing an aesthetic and navigable website. I
+                    can even work with python plugins in GIS tools.</p>
+            </div>
+        </section>
+        <section id="Education" class="thirdSection">
+            <div class="leftsec">
+                <h2 class="pro" style="font-size: 30px;font-family: 'Courier New', Courier, monospace;"><i
+                        class="fa-solid fa-user-graduate"></i>My Education:</h2>
+                <pre class="edu"><div>SEE: DAV,Biratnagar</div></pre>
+                <pre class="edu"><div>CGPA: 3.6</div></pre>
+                <pre class="edu"><div>SLC: Araniko Awasiya H.S.S,Biratnagar</div></pre>
+                <pre class="edu"><div>CGPA: 3.36</div></pre>
+                <pre class="edu"><div>Undergraduation:Kathmandu University
+     School of Engineering
+       </div></pre>
+                <h2 class="pro" style="font-size: 30px;font-family: 'Courier New', Courier, monospace;"><i
+                        class="fa-solid fa-book"></i>Relevant Coursework</h2>
+                <pre class="course"><div>Introduction to Surveying    Topographical Surveying</div></pre>
+                <pre class="course"><div>Control Surveying    Cartography</div></pre>
+                <Pre class="course"><div>GIS    SDBMS   Photogrammetry</div></Pre>
+                <Pre class="course"><div>Land Administration    Cadastre    Remote Sensing</div></Pre>
+                <pre class="course"><div>Land Use and Planning    WebGIS</div></pre>
+                <pre class="course"><div>Java programming     Python Programming</div></pre>
+            </div>
+            <div class="rightsec">
+                <h2 style="font-family:'Courier New';">An Overview of My Education</h2>
+                <div id="map-tools"
+                    style="height: 450px; width: 100%; border: 2px solid #ccc; border-radius: 10px; position: relative;">
+                </div>
+                <div style="margin-top: 10px; display: flex; flex-wrap: wrap; gap: 10px;">
+                    <button onclick="enableBuffer()">🟢 Create Buffer</button>
+                    <button onclick="enableDistance()"> Measure Distance</button>
+                    <button onclick="enableArea()"> Calculate Area</button>
+               
+                </div>
+                <div id="tool-output" style="margin-top: 10px; font-family:'Courier New'; font-size: 14px;"></div>
+            </div>
+
+        </section>
+        <section id="Projects" class="forthSection">
+            <div class="container">
+                <h2 class="pro" style="font-size: 30px;font-family: 'Courier New', Courier, monospace;">My Projects</h2>
+                <div class="project-list">
+                    <div>
+                        <H3><i class="fa-solid fa-diagram-project"></i>Flood Analysis using AHP and Fuzzy AHP</H3>
+                        <P>This project helps to analyze the sensitiveness of spatial analysis through AHP and Fuzzy AHP
+                        </P>
+                        <a href="fuzzyahp.pdf">Learn more</a>
+                    </div>
+                    <div>
+                        <H3><i class="fa-solid fa-database"></i>PgRouting with postGIS plugins</H3>
+                        <P>This project helps to detemine the shortest route between two places using postgis in
+                            postgresql</P>
+                        <a href="pgrouting.pdf">Learn more</a>
+                    </div>
+                    <div>
+                        <H3><i class="fa-brands fa-python"></i>Python in QGIS Plugins</H3>
+                        <P>This project shows a urban sprawl in kathmandu valley and its impact on vegetation.</P>
+                        <a href="python project.png.png">Learn more</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="Achievements" class="fifthSection">
+            <div class="container2">
+                <h2 class="pro" style="font-size: 30px;font-family: 'Courier New', Courier, monospace;">My Achievements
+                </h2>
+                <div class="certificate-list">
+                    <div>
+                        <H3>Mapping Banepa Municipality</H3>
+                        <img src="Banepa municipality mapping.jpeg" height=350></img>
+                    </div>
+                    <div>
+                        <H3>Presenter at Space-Con 2025</H3>
+                        <img src="Space_con_representer.jpeg" height=350></img>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <section id="Contact" class="sixthSection">
+            <div id="contact-list">
+                <div class=row>
+                    <div class="contact-left">
+                        <h2 class="pro" style="font-size: 30px;font-family: 'Courier New', Courier, monospace;">Contact
+                            Me</h2>
+                        <p><i class="fa-solid fa-paper-plane"></i>bipulchaudhary2000@gmail.com</p>
+                        <p><i class="fa-solid fa-phone"></i>+977-9819953958</p>
+                        <div class="social-icons">
+                            <a href="https://www.facebook.com/bipul.chaudhary.756/"><i
+                                    class="fa-brands fa-facebook"></i></a>
+                            <a
+                                href="https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.instagram.com%2Fbipul_chaudhary%3Figsh%3DMWVyZXJ4MXhpdzM1aQ%253D%253D%26utm_source%3Dqr%26fbclid%3DIwZXh0bgNhZW0CMTAAYnJpZBExanB4bzZiQldNTVdwN3F0eQEeGo6cDoYPM72CK-lMMu3YP8o1QZ44wKc_gaWZJrNaFVZiw0eL4HVqNzYd2A4_aem_7F4hbItshHBhazhF5bL_sw&h=AT03CB8Iup8W4s1L7_1Az8NRbGlGuw_pJsGA8oj4flfDfTt44dUp-pgudYYJ7c5-HZH82MNAmx9fk0Sz6iA5qeXbvNroUKKbll-Yr-nvT84AdxZW6-PC2I7gbwE084SHhNLhNw"><i
+                                    class="fa-brands fa-instagram"></i></a>
+                            <a href="https://www.linkedin.com/in/bipul-chaudhary-043102315/"><i
+                                    class="fa-brands fa-linkedin"></i></a>
+                        </div>
+
+
+                        <a href="My_CV.pdf" download class="btn btn2">Download CV</a>
+                    </div>
+
+                    <div class="contact-right">
+                        <form name="submit-to-google-sheet">
+                            <input type="text" name="Name" placeholder="Your Name" required>
+                            <input type="email" name="Email" placeholder="Your email" required>
+                            <textarea name="Message" rows=6 placeholder="Your Message"></textarea>
+                            <button type="submit" class="btn btn2">Submit</button>
+
+                        </form>
+                        <span id="msg"></span>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+        </div>
+        </section>
+    </main>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script>//for blinking first line
+        function _0x9dd1(_0x2eb597, _0x2588a1) { var _0x56600e = _0x5660(); return _0x9dd1 = function (_0x9dd176, _0x2ba166) { _0x9dd176 = _0x9dd176 - 0xd6; var _0x25b429 = _0x56600e[_0x9dd176]; return _0x25b429; }, _0x9dd1(_0x2eb597, _0x2588a1); } function _0x5660() { var _0x8c4b = ['4009164HJnhHG', '281876funixG', '831729LmxIdE', '112wTtjVp', '#element', '5uwkIRV', '25208bKanlD', 'Frontend\x20Developer', '20sCNdSO', '3240532waQujj', 'Advanced\x20Mapper\x20at\x20OSM', '603498DnTbVg', '6828111SIxdgQ']; _0x5660 = function () { return _0x8c4b; }; return _0x5660(); } var _0x3034fe = _0x9dd1; (function (_0xe4fc91, _0x30772a) { var _0x29ffb4 = _0x9dd1, _0xda2594 = _0xe4fc91(); while (!![]) { try { var _0x4296b7 = -parseInt(_0x29ffb4(0xd6)) / 0x1 + parseInt(_0x29ffb4(0xda)) / 0x2 + parseInt(_0x29ffb4(0xdf)) / 0x3 + -parseInt(_0x29ffb4(0xdd)) / 0x4 * (-parseInt(_0x29ffb4(0xd9)) / 0x5) + -parseInt(_0x29ffb4(0xe1)) / 0x6 + -parseInt(_0x29ffb4(0xe2)) / 0x7 * (parseInt(_0x29ffb4(0xd7)) / 0x8) + -parseInt(_0x29ffb4(0xe0)) / 0x9 * (-parseInt(_0x29ffb4(0xdc)) / 0xa); if (_0x4296b7 === _0x30772a) break; else _0xda2594['push'](_0xda2594['shift']()); } catch (_0x22d9ec) { _0xda2594['push'](_0xda2594['shift']()); } } }(_0x5660, 0x74992)); var typed = new Typed(_0x3034fe(0xd8), { 'strings': [_0x3034fe(0xde), _0x3034fe(0xdb)], 'typeSpeed': 0x32 });
+    </script>
+    <script>//for map
+        var _0x5313ea = _0x4d0a; (function (_0x217017, _0x37db71) { var _0x21e6d0 = _0x4d0a, _0x216487 = _0x217017(); while (!![]) { try { var _0x3fe517 = -parseInt(_0x21e6d0(0x116)) / 0x1 + -parseInt(_0x21e6d0(0x11b)) / 0x2 + -parseInt(_0x21e6d0(0x125)) / 0x3 * (-parseInt(_0x21e6d0(0x118)) / 0x4) + -parseInt(_0x21e6d0(0x119)) / 0x5 * (parseInt(_0x21e6d0(0x115)) / 0x6) + -parseInt(_0x21e6d0(0x121)) / 0x7 * (parseInt(_0x21e6d0(0x11d)) / 0x8) + parseInt(_0x21e6d0(0x124)) / 0x9 * (-parseInt(_0x21e6d0(0x11c)) / 0xa) + parseInt(_0x21e6d0(0x123)) / 0xb; if (_0x3fe517 === _0x37db71) break; else _0x216487['push'](_0x216487['shift']()); } catch (_0x188cdd) { _0x216487['push'](_0x216487['shift']()); } } }(_0x4a49, 0x9af9b)); var map = L['map'](_0x5313ea(0x112)); L[_0x5313ea(0x113)](_0x5313ea(0x120), { 'attribution': _0x5313ea(0x114) })[_0x5313ea(0x111)](map), L['marker']([26.4719, 86.7672])[_0x5313ea(0x111)](map)[_0x5313ea(0x11f)]('My\x20Hometown:\x20Tilathi,\x20Saptari'), L[_0x5313ea(0x117)]([26.5422, 86.7569])[_0x5313ea(0x111)](map)['bindPopup'](_0x5313ea(0x11a)); var bounds = L[_0x5313ea(0x122)]([[26.6, 86.75], [26.53, 86.75]]); map[_0x5313ea(0x11e)](bounds); function _0x4d0a(_0x1ee1f3, _0x248728) { var _0x4a49e3 = _0x4a49(); return _0x4d0a = function (_0x4d0ae6, _0x95abe3) { _0x4d0ae6 = _0x4d0ae6 - 0x111; var _0x5b7a67 = _0x4a49e3[_0x4d0ae6]; return _0x5b7a67; }, _0x4d0a(_0x1ee1f3, _0x248728); } function _0x4a49() { var _0x33cfe4 = ['fitBounds', 'bindPopup', 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', '3259865tysFfj', 'latLngBounds', '42881795MeUQkT', '9GUVTEX', '87GMyqLF', 'addTo', 'map', 'tileLayer', '©\x20OpenStreetMap\x20contributors', '141870qofCar', '1095525tUWjdG', 'marker', '4892AZZrIA', '80RnvvNU', 'Residential\x20Address:\x20Rajbiraj,\x20Saptari', '317368diDzto', '12008090VZecRP', '8SrpJMA']; _0x4a49 = function () { return _0x33cfe4; }; return _0x4a49(); }
+    </script>
+    <script>//for form to be submitted
+        const _0x341ed2 = _0x1c72; (function (_0x183ef6, _0x175cf3) { const _0x282cb1 = _0x1c72, _0x162f61 = _0x183ef6(); while (!![]) { try { const _0x201909 = parseInt(_0x282cb1(0x11b)) / 0x1 + -parseInt(_0x282cb1(0x113)) / 0x2 + parseInt(_0x282cb1(0x110)) / 0x3 * (-parseInt(_0x282cb1(0x11e)) / 0x4) + parseInt(_0x282cb1(0x11c)) / 0x5 * (-parseInt(_0x282cb1(0x10c)) / 0x6) + parseInt(_0x282cb1(0x114)) / 0x7 + parseInt(_0x282cb1(0x10f)) / 0x8 * (-parseInt(_0x282cb1(0x10b)) / 0x9) + parseInt(_0x282cb1(0x112)) / 0xa; if (_0x201909 === _0x175cf3) break; else _0x162f61['push'](_0x162f61['shift']()); } catch (_0x52151d) { _0x162f61['push'](_0x162f61['shift']()); } } }(_0x54ce, 0x7e415)); function _0x54ce() { const _0x5d2ba0 = ['message', '22621980OJctBC', '1832458inngdd', '2917572uMYtlB', 'POST', 'reset', 'addEventListener', 'submit', 'getElementById', 'Message\x20sent\x20successfully', '113084yWSCxh', '5rLcTZT', 'preventDefault', '45028Pthgrs', 'https://script.google.com/macros/s/AKfycbzidcx3UnRlkHdeCNLRk_v6NKcH-PSnZg4hOStdv4Nod1m_eT-6UEgdrT5GSmcZnEpuLw/exec', 'innerHTML', 'submit-to-google-sheet', '18xgVDyl', '4480068ylrkRr', 'then', 'Error!', '737056BzKClC', '114LLnShJ']; _0x54ce = function () { return _0x5d2ba0; }; return _0x54ce(); } const scriptURL = _0x341ed2(0x11f), form = document['forms'][_0x341ed2(0x10a)], msg = document[_0x341ed2(0x119)]('msg'); function _0x1c72(_0x4d749f, _0x4e4804) { const _0x54ce35 = _0x54ce(); return _0x1c72 = function (_0x1c7257, _0x549015) { _0x1c7257 = _0x1c7257 - 0x10a; let _0xe2147c = _0x54ce35[_0x1c7257]; return _0xe2147c; }, _0x1c72(_0x4d749f, _0x4e4804); } form[_0x341ed2(0x117)](_0x341ed2(0x118), _0x38656c => { const _0x472ac2 = _0x341ed2; _0x38656c[_0x472ac2(0x11d)](), fetch(scriptURL, { 'method': _0x472ac2(0x115), 'body': new FormData(form) })[_0x472ac2(0x10d)](_0x4b4342 => { const _0x2c6c33 = _0x472ac2; msg[_0x2c6c33(0x120)] = _0x2c6c33(0x11a), setTimeout(function () { const _0x3af1c2 = _0x2c6c33; msg[_0x3af1c2(0x120)] = ''; }, 0x1388), form[_0x2c6c33(0x116)](); })['catch'](_0x472652 => console['error'](_0x472ac2(0x10e), _0x472652[_0x472ac2(0x111)])); });
+    </script>
+    <script src="https://unpkg.com/@turf/turf@6/turf.min.js"></script>
+    <script>
+        const toolMap = L.map('map-tools', {
+            drawControl: false,
+            zoomControl: true
+        }).setView([28.2, 84], 7);
+
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; OpenStreetMap contributors'
+        }).addTo(toolMap);
+
+        let currentFeature = null;
+        const drawnItems = new L.FeatureGroup();
+        toolMap.addLayer(drawnItems);
+
+        const drawControl = new L.Control.Draw({
+            position: 'topleft',
+            draw: {
+                polygon: true,
+                polyline: true,
+                circle: false,
+                rectangle: false,
+                marker: true,
+                circlemarker: false
+            },
+            edit: {
+                featureGroup: drawnItems
+            }
+        });
+        toolMap.addControl(drawControl);
+
+
+        toolMap.on(L.Draw.Event.CREATED, function (event) {
+            clearMap();
+            currentFeature = event.layer;
+            drawnItems.addLayer(currentFeature);
+            document.getElementById('tool-output').innerText = 'Feature drawn. Now choose a tool.';
+        });
+
+        function clearMap() {
+            drawnItems.clearLayers();
+            currentFeature = null;
+            document.getElementById('tool-output').innerText = '';
+        }
+
+        function enableBuffer() {
+            if (!currentFeature) return alert('Draw a point, line, or polygon first.');
+            const radiusKm = prompt("Enter buffer radius in kilometers:");
+            if (!radiusKm || isNaN(radiusKm)) return;
+
+            const geojson = currentFeature.toGeoJSON();
+            const buffered = turf.buffer(geojson, parseFloat(radiusKm), { units: 'kilometers' });
+
+            clearMap();
+            currentFeature = L.geoJSON(buffered, { color: 'red' }).addTo(drawnItems);
+            document.getElementById('tool-output').innerText = `Buffer of ${radiusKm} km applied.`;
+        }
+
+        function enableDistance() {
+            if (!currentFeature) return alert('Draw a line first.');
+            const geojson = currentFeature.toGeoJSON();
+            if (geojson.geometry.type !== 'LineString') return alert('Distance can only be measured on a line.');
+
+            const length = turf.length(geojson, { units: 'kilometers' });
+            document.getElementById('tool-output').innerText = `Distance: ${length.toFixed(2)} km.`;
+        }
+
+        function enableArea() {
+            if (!currentFeature) return alert('Draw a polygon first.');
+            const geojson = currentFeature.toGeoJSON();
+            if (geojson.geometry.type !== 'Polygon') return alert('Area can only be calculated on a polygon.');
+
+            const area = turf.area(geojson) / 1e6;
+            document.getElementById('tool-output').innerText = `Area: ${area.toFixed(3)} km².`;
+        }
+    </script>
+   <script>
+    function toggleMenu() {
+        const navLinks = document.getElementById("nav-links");
+        navLinks.classList.toggle("show");
+    }
+</script>
+
+
+
+</body>
+
+</html>
