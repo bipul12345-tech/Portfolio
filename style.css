@@ -43,10 +43,11 @@ nav ul li{
  nav ul li a{
     text-decoration: none;
     color: white;
+     font-size: 19px;
 }
 nav ul li a:hover{
     color: rgb(189, 189, 241);
-    font-size : 1.01rem;
+    font-size : 1.2rem;
 }
 #element{
     color: rgb(155, 155, 226);
